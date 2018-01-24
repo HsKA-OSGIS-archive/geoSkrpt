@@ -1,3 +1,4 @@
+/**Author Nnoli Chinazom Eunice*/
 //code.stephenmorley.org
 function Queue() {
   var a = [],

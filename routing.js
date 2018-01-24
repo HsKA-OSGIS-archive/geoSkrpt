@@ -1,3 +1,4 @@
+/**Author Nnoli Chinazom Eunice*/
 var profilesList = [];
 var leafletid = 0;
 /**
@@ -38,14 +39,14 @@ function clicking(latlng) {
     var marker = L.marker(latlng);
     markerList.addLayer(marker);
     marker["index"] = listofNode.length - 1;
-    marker.dragging.enable();
+    marker.dragging.disable();
     marker.on('dragend', e => reroute(e));
-// Get the profile selected
+    // Get the profile selected
     var profile = $('#myselect option:selected').val();
     // If the number of points is greater than 1
     //  Find route by taking thelast two items in the list and passing the profile selected
     if (listofNode.length >= 2) {
-          var l = listofNode.length;
+      var l = listofNode.length;
       var from = listofNode[l - 2];
       var to = listofNode[l - 1];
       var markers = [l - 2, l - 1];
@@ -147,6 +148,7 @@ function handleAjax(result, profile, markers, alternative) {
 
   return polyline;
 }
+
 function changeSelectedRoute() {
   // Get selected profile
   var profile = $('#myselect option:selected').val();
@@ -157,8 +159,8 @@ function changeSelectedRoute() {
   routeList.eachLayer(function(layer) {
     if (layer.selected) {
       selectedRoute = layer;
-          selectedRoute.profile = profile;
-          }
+      selectedRoute.profile = profile;
+    }
   });
   if (selectedRoute != undefined) {
     // Get the associated markers
@@ -196,10 +198,11 @@ function changeSelectedRoute() {
 function toggleLegend() {
   $('#legend').toggle();
 }
+
 function changeRoute(e, polyline) {
   // Stop map click listener
   L.DomEvent.stop(e);
-    polyline.setStyle({
+  polyline.setStyle({
     color: 'yellow'
   });
   var alt;

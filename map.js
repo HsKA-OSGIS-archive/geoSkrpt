@@ -1,3 +1,4 @@
+/**Author Nnoli Chinazom Eunice*/
 var map;
 var listofNode = [];
 var nogoAreas = new L.FeatureGroup();
@@ -61,5 +62,4 @@ function onDrawCreated(e) {
   } else if (e.layerType === "marker") {
     clicking(e.layer._latlng);
   }
-
 }

@@ -1,142 +1,161 @@
+/**Author Nnoli Chinazom Eunice*/
+
 body {
-    padding: 0;
-    margin: 0;
-}
-html, body, #map {
-    height: 100%;
-    width: 100%;
-	position: fixed;
-	background-color: #F4F4F4;
-}
-#map{
-	border: 1px #778899 solid;
+  padding: 0;
+  margin: 0;
 }
 
-#location{
+html, body, #map {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: #F4F4F4;
+}
+
+#map {
+  border: 1px #778899 solid;
+}
+
+#location {
   width: 30px;
   height: 30px;
   border-radius: 4px;
 }
-#navigation{
-	background: #e3e7ea;
-	border: 2px #778899 solid;
-	border-top: 0;
+
+#navigation {
+  background: #e3e7ea;
+  border: 2px #778899 solid;
+  border-top: 0;
 }
 
 #navigation ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-
 #navigation ul li a {
-	
-	height:50px;
-	display: block;
-	float: left;
-	padding: 17px 15px 0 15px;
-	font: bold 16px Arial;
-	color: #000000;
-	text-decoration: none;
-	background: url(images/navigation-separator.png) no-repeat right center;
+  height: 50px;
+  display: block;
+  float: left;
+  padding: 17px 15px 0 15px;
+  font: bold 16px Arial;
+  color: #000000;
+  text-decoration: none;
+  background: url(images/navigation-separator.png) no-repeat right center;
 }
 
 #navigation ul li a:hover {
-	color:#202020;
-	background: url(images/navigation-hover.png) repeat-x left top;
+  color: #202020;
+  background: url(images/navigation-hover.png) repeat-x left top;
 }
 
 #navigation ul li.active a {
-	color:#202020;
-	background: url(images/navigation-hover.png) repeat-x left top;
+  color: #202020;
+  background: url(images/navigation-hover.png) repeat-x left top;
 }
 
 /* The Modal (background) */
+
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
+
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
+
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .my-custom-control {
-    padding:5px 10px;
-    background: rgba(0,0,0,0.5);
-    color: #fff;
-    font-size: 11px;
-    line-height: 18px;
-    border-radius: 5px;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 11px;
+  line-height: 18px;
+  border-radius: 5px;
 }
 
 .my-custom-control:empty {
-    display: none;
+  display: none;
 }
 
 #legend {
-    border: #202020 2px solid;
-    background-color: #fefefe;
-    color: #000000;
+  border: #202020 2px solid;
+  background-color: #fefefe;
+  color: #000000;
 }
 
 #linem {
-	text-align: right;
+  text-align: right;
 }
+
 #pr {
-	float: left;
-	border-width: 0 5px 0 0;
-	border-style: solid black;
+  float: left;
+  border-width: 0 5px 0 0;
+  border-style: solid black;
 }
+
 #alt {
-	float: left;
-	padding: 0 10px 0 10px;
+  float: left;
+  padding: 0 10px 0 10px;
 }
+
 #label {
-	float: left;
-	padding: 7px 2px 0 0;
-	font-weight: bold;
+  float: left;
+  padding: 7px 2px 0 0;
+  font-weight: bold;
 }
-#label1{
-	float: left;
-	padding: 7px 2px 0 0;	
-	font-weight: bold;
+
+#label1 {
+  float: left;
+  padding: 7px 2px 0 0;
+  font-weight: bold;
 }
 
 #leg-table {
-	background-color: #F4F4F4;
-	padding: 0 5px 0 0;
+  background-color: #F4F4F4;
+  padding: 0 5px 0 0;
 }
 
-#puttony{
-	float: right;
+#puttony {
+  float: right;
 }
