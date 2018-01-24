@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title> Brouter-Web Multi Modal</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.13/leaflet.draw.css">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="style.css" />
+	<!-- Latest compiled and minified JavaScript -->
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.13/leaflet.draw.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/5.0.4/turf.min.js"></script>
+
+
+	<script type="text/javascript" src="Queue.js"></script>
+	<script type="text/javascript" src="map.js"></script>
+	<script type="text/javascript" src="routing.js"></script>
+
+</head>
+
+<body>
+	<div class="navbar navbar-default" id="navigation">
+		<ul class="nav navbar-nav">
+			<li><img src="images/logo.png" width="50" height="50" /></li>
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="navigation.html">About us</a></li>
+			<li><a href="https://github.com/HsKA-OSGIS/geoSkrpt" target="_blank">Credit</a></li>
+			<!--link to github readme file -->
+	</div>
+
+	<div id="fc">
+		<div id="pr">
+			<p id="label">Profile:</p>
+			<select class="selectpicker" id="myselect">
+						<option>trekking</option>
+						<option>fastbike</option>
+						<option>car-fast</option>
+						<option>shortest</option>
+						<option>moped</option>
+						<option>fastbike-lowtraffic</option>
+						<option>fastbike-asia-pacific</option>
+					</select>
+		</div>
+		<div id="alt">
+			<p id="label1">Alternatives:</p>
+			<select class="selectpicker" id="alternativeidx">
+						<option>Original</option>
+						<option>First alternative</option>
+						<option>Second alternative</option>
+						<option>Third alternative</option>
+					</select>
+		</div>
+		<button class="btn btn-primary btn-md" onClick="changeSelectedRoute()">Change</button>
+		<button class="btn btn-primary btn-md" id="puttony" onClick="toggleLegend()"><i class="glyphicon glyphicon-align-right" title="Toggle legend"></i></button>
+	</div>
+
+	<div id="#content">
+		<div id="map"></div>
+		<div class="leaflet-bottom leaflet-right" id="legend">
+			<table id="leg-table">
+				<tr>
+					<td><img src="./legend/trekking.ico"></td>
+					<td id="linem">trekking</td>
+				</tr>
+				<tr>
+					<td><img src="./legend/fastbike.ico"></td>
+					<td id="linem">fastbike</td>
+				</tr>
+				<tr>
+					<td><img src="./legend/car-fast.ico"></td>
+					<td id="linem">car-fast</td>
+				</tr>
+				<tr>
+					<td><img src="./legend/shortest.ico"></td>
+					<td id="linem">shortest</td>
+				</tr>
+				<tr>
+					<td><img src="./legend/moped.ico"></td>
+					<td id="linem">moped</td>
+				</tr>
+				<tr>
+					<td><img src="./legend/fastbike-lowtraffic.ico"></td>
+					<td id="linem">fastbike-lt</td>
+				</tr>
+				<tr>
+					<td><img src="./legend/fastbike-asia-pacific.ico"></td>
+					<td id="linem">fastbike-a-p</td>
+				</tr>
+			</table>
+
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		initMap();
+	</script>
+
+</body>
+
+</html>
